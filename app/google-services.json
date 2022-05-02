@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "720207151723",
+    "project_id": "peaceful-tide-250814",
+    "storage_bucket": "peaceful-tide-250814.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:720207151723:android:6a557a519f6cf5d6d6672e",
+        "android_client_info": {
+          "package_name": "nhom29.gk_quanlithietbi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "720207151723-5donhlcoo5i3cdmt5eovigq2s8qt461p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "nhom29.gk_quanlithietbi",
+            "certificate_hash": "92da26215f29c3268dddec382cd72380de028cc6"
+          }
+        },
+        {
+          "client_id": "720207151723-2ou962tjqsmh1i597242u68ttbur2g3c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCS6JdiRrsJCDlwkZbDvRanl20wUjhRqL0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "720207151723-2ou962tjqsmh1i597242u68ttbur2g3c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

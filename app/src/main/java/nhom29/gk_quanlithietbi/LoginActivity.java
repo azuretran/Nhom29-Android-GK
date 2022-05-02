@@ -9,7 +9,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.textfield.TextInputLayout;
 
 import nhom29.gk_quanlithietbi.dao.TaiKhoanDAO;
 import nhom29.gk_quanlithietbi.model.TaiKhoan;
@@ -25,6 +28,11 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        /*
+        * register new users
+        *
+        * */
+        TextView mTextView = findViewById(R.id.register_user);
 
         setTitle("ĐĂNG NHẬP");
         edUserName = findViewById(R.id.edUserName);

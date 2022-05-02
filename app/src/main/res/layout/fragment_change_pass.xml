@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".fragment.ChangePassFragment">
+    tools:context=".fragment.ChangePassFragment"
+    android:background="@drawable/gradient_background"
+    >
 
     <!-- TODO: Update blank fragment layout -->
     <ImageView
@@ -14,7 +16,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="20dp"
-        android:src="@drawable/ic_pass" />
+        android:src="@drawable/ic_key_svgrepo_com" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -27,6 +29,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Mật khẩu cũ"
+            android:background="@drawable/rounded_edittext"
+
             android:inputType="textPassword"
             android:maxLines="1" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -41,7 +45,10 @@
             android:id="@+id/edPassChange"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:hint="Mật khẩu"
+            android:background="@drawable/rounded_edittext"
             android:inputType="textPassword"
             android:maxLines="1" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -57,6 +64,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nhập lại Mật khẩu"
+            android:background="@drawable/rounded_edittext"
+
             android:inputType="textPassword"
             android:maxLines="1" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -67,21 +76,28 @@
         android:orientation="horizontal">
 
         <Button
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
             android:id="@+id/btnSaveUserChange"
-            android:layout_width="100dp"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
-            android:drawableStart="@drawable/ic_save"
+            android:drawableStart="@drawable/ic_diskette_save_svgrepo_com"
+
             android:text="Lưu"
+            android:background="@drawable/rounded_button_save"
             android:textSize="20dp" />
 
         <Button
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
             android:id="@+id/btnCancelUserChange"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
-            android:drawableStart="@drawable/ic_save"
+            android:drawableStart="@drawable/ic_cancel_svgrepo_com"
             android:text="Huỷ"
+            android:background="@drawable/rounded_button_cancel"
             android:textSize="20dp" />
     </LinearLayout>
 

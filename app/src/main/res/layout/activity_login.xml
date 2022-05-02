@@ -7,52 +7,100 @@
     android:background="@drawable/gradient_background"
     android:orientation="vertical"
     tools:context=".LoginActivity">
+<EditText
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="WELCOME TO PTIT"
+    android:textSize="25dp"
+    android:textColor="#FDFEFF"
+    android:layout_marginLeft="70dp"
 
+    android:layout_marginTop="50dp"
+    />
     <ImageView
-        android:src="@drawable/logo_ptit"
-        android:layout_width="150dp"
+        android:layout_width="217dp"
         android:layout_height="150dp"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="20dp" />
-    <!--        android:src="@drawable/ic_pass" -->
+        android:layout_marginTop="10dp"
+
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/logo_ptit" />
 
 
-    <com.google.android.material.textfield.TextInputLayout
+   <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp">
+        android:layout_marginBottom="20dp"
+       style="@style/ThemeOverlay.Material3"
+        app:endIconDrawable="@drawable/ic_baseline_person_24"
+        android:hint="Tài Khoản"
+       android:background="@drawable/rounded_edittext"
+        app:helperTextTextColor="@color/round_gradient_button_start_color"
+    >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edUserName"
+            android:drawablePadding="12dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Tên đăng nhập" />
+            android:textColor="@color/dark"
+            android:textSize="30dp"
+            android:textAlignment="center"
+
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            />
 
     </com.google.android.material.textfield.TextInputLayout>
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
+
+        android:textColorHint="@color/red"
+
+        android:background="@drawable/rounded_edittext"
+        android:hint="Mật Khẩu"
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Mật khẩu"
+            android:textColor="@color/dark"
+            android:textSize="25dp"
+            android:drawablePadding="12dp"
+            android:textAlignment="center"
+            android:drawableStart="@drawable/ic_baseline_lock_24"
+
             android:inputType="textPassword"
             android:maxLines="1" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <CheckBox
-        android:id="@+id/chkRememberPass"
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:text="Lưu mật khẩu" />
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/chkRememberPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:text="Lưu mật khẩu" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Quên mật khẩu"
+            android:textColor="#FDFEFF"
+            />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -61,19 +109,45 @@
         android:orientation="horizontal">
 
         <Button
+            android:background="@drawable/roundedbutton"
             android:id="@+id/btnLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textColor="#FDFEFF"
+
             android:text="Đăng nhập" />
 
         <Button
+            android:background="@drawable/roundedbutton"
+            android:layout_marginLeft="2dp"
             android:id="@+id/btnCancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textColor="#FDFEFF"
+
             android:text="Huỷ" />
     </LinearLayout>
-
-
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Chưa có tài khoản ?"
+        android:textColor="#ffff"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="100dp"
+/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Đăng Kí Ngay"
+        android:id="@+id/register_user"
+        android:drawableStart="@drawable/ic_baseline_person_add_24"
+        android:drawablePadding="15dp"
+        android:textColor="@color/red"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="100dp"
+        />
 </LinearLayout>
