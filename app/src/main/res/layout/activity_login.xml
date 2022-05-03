@@ -4,19 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_background"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+
     android:orientation="vertical"
     tools:context=".LoginActivity">
-<EditText
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="WELCOME TO PTIT"
-    android:textSize="25dp"
-    android:textColor="#FDFEFF"
-    android:layout_marginLeft="70dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="2.0"
+            android:scaleType="centerCrop"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/background_login"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    android:layout_marginTop="50dp"
-    />
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:text="WELCOME TO PTIT"
+        android:textColor="@color/dark"
+        android:textSize="25dp"
+
+        android:textStyle="bold" />
+
     <ImageView
         android:layout_width="217dp"
         android:layout_height="150dp"
@@ -27,24 +49,24 @@
         android:src="@drawable/logo_ptit" />
 
 
-   <com.google.android.material.textfield.TextInputLayout
+ <!--  <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
        style="@style/ThemeOverlay.Material3"
         app:endIconDrawable="@drawable/ic_baseline_person_24"
         android:hint="Tài Khoản"
-       android:background="@drawable/rounded_edittext"
+        android:background="@drawable/button_bg"
         app:helperTextTextColor="@color/round_gradient_button_start_color"
     >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edUserName"
-            android:drawablePadding="12dp"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/dark"
-            android:textSize="30dp"
+            android:textSize="16sp"
             android:textAlignment="center"
 
             android:drawableStart="@drawable/ic_baseline_person_24"
@@ -57,10 +79,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-
+        android:background="@drawable/button_bg"
         android:textColorHint="@color/red"
 
-        android:background="@drawable/rounded_edittext"
+        android:textSize="16sp"
         android:hint="Mật Khẩu"
         app:passwordToggleEnabled="true">
 
@@ -69,8 +91,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/dark"
-            android:textSize="25dp"
-            android:drawablePadding="12dp"
+            android:textSize="16sp"
+
             android:textAlignment="center"
             android:drawableStart="@drawable/ic_baseline_lock_24"
 
@@ -78,7 +100,54 @@
             android:maxLines="1" />
 
     </com.google.android.material.textfield.TextInputLayout>
+-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp">
+    <EditText
+        android:id="@+id/edUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent=".8"
+        app:layout_constraintVertical_bias=".3"
+        app:layout_constraintHorizontal_bias=".5"
+        android:drawableLeft="@drawable/ic_avatar_svgrepo_com"
+        android:drawablePadding="20dp"
+        android:hint="Tên Tài Khoản"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:background="@drawable/button_bg"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/dark"
+        />
 
+        <EditText
+            android:id="@+id/edPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_bg"
+            android:drawableStart="@drawable/ic_key_svgrepo_com"
+            android:hint="Mật Khẩu"
+            android:drawablePadding="20dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.833"
+            app:layout_constraintWidth_percent=".8" />
+        >
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -92,13 +161,19 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:layout_weight="1"
+            android:button="@drawable/custom_checkbox"
+            android:padding="5dp"
             android:text="Lưu mật khẩu" />
-        <EditText
+        <TextView
+            android:id="@+id/forgetpass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:text="Quên mật khẩu"
-            android:textColor="#FDFEFF"
+            android:textSize="20sp"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/ic_question_svgrepo_com"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/dark"
             />
     </LinearLayout>
 
@@ -116,10 +191,11 @@
             android:layout_weight="1"
             android:textColor="#FDFEFF"
 
+
             android:text="Đăng nhập" />
 
         <Button
-            android:background="@drawable/roundedbutton"
+            android:background="@drawable/rounded_button_cancel"
             android:layout_marginLeft="2dp"
             android:id="@+id/btnCancel"
             android:layout_width="wrap_content"
@@ -129,25 +205,31 @@
 
             android:text="Huỷ" />
     </LinearLayout>
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAlignment="center"
+
         android:text="Chưa có tài khoản ?"
-        android:textColor="#ffff"
-        android:layout_marginTop="20dp"
+        android:textColor="@color/dark"
+        android:layout_marginTop="40dp"
         android:layout_marginLeft="100dp"
+        android:textSize="20sp"
 />
-    <EditText
+    <TextView
+        android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:text="Đăng Kí Ngay"
         android:id="@+id/register_user"
-        android:drawableStart="@drawable/ic_baseline_person_add_24"
-        android:drawablePadding="15dp"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@drawable/ic_user_add_svgrepo_com"
         android:textColor="@color/red"
+        android:textSize="20sp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="100dp"
         />
+        //android:background="@drawable/ripple_effect_text"
+
 </LinearLayout>
