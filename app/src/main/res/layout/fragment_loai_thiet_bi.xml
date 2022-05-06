@@ -18,7 +18,55 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
         android:layout_margin="16dp"
-        android:src="@drawable/ic_add"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/ic_add_svgrepo_com"
         app:layout_anchorGravity="bottom|right|end" />
 
-</FrameLayout>
+    <!--  <com.getbase.floatingactionbutton.FloatingActionsMenu
+          android:id="@+id/fab1"
+
+          android:layout_width="wrap_content"
+
+          android:layout_height="wrap_content"
+          app:layout_anchorGravity="bottom|right|end"
+          android:layout_gravity="bottom|right"
+          android:layout_marginLeft="16dp"
+          android:layout_marginStart="16dp"
+
+          app:fab_addButtonColorNormal="@color/white"
+          app:fab_addButtonColorPressed="@color/red"
+          app:fab_addButtonPlusIconColor="@color/mr_cast_meta_black_scrim"
+          app:fab_addButtonSize="normal"
+
+          app:fab_labelStyle="@style/menu_labels_style"
+          app:fab_labelsPosition="right">
+
+          <com.getbase.floatingactionbutton.FloatingActionButton
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              app:fab_colorNormal="@color/white"
+              app:fab_icon="@drawable/ic_pdf_svgrepo_com"
+              app:fab_title="Xuất File PDF"
+              app:fab_colorPressed="@color/white_pressed"/>
+
+          <com.getbase.floatingactionbutton.FloatingActionButton
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              app:fab_colorNormal="@color/white"
+              app:fab_size="mini"
+              app:fab_icon="@drawable/ic_microsoft_excel_2013_logo_svgrepo_com"
+              app:fab_title="Xuất File excel"
+              app:fab_colorPressed="@color/white_pressed"/>
+          <com.getbase.floatingactionbutton.FloatingActionButton
+              android:id="@+id/fab"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              app:fab_colorNormal="@color/white"
+              app:fab_size="mini"
+              app:fab_icon="@drawable/ic_add_svgrepo_com"
+              app:fab_title="Thêm Thiết Bị"
+              app:fab_colorPressed="@color/white_pressed"/>
+
+      </com.getbase.floatingactionbutton.FloatingActionsMenu>
+  -->
+  </FrameLayout>

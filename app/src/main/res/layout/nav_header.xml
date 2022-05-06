@@ -2,24 +2,51 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="192dp"
-    android:background="?attr/colorPrimaryDark"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     android:gravity="bottom"
     android:orientation="vertical"
-    android:padding="16dp"
+
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center" />
-
-    <TextView
-        android:id="@+id/txtUser"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Welcome"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@android:color/white" />
+        android:layout_height="170dp"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="1.0"
+            android:scaleType="centerCrop"
+            app:layout_constraintVertical_bias="0"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/background_login"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/txtUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Xin Chào"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@android:color/black" />
+
+        <ImageView
+            android:id="@+id/imgAnhDaiDien"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_avat1ar_svgrepo_com"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+
+
 </LinearLayout>

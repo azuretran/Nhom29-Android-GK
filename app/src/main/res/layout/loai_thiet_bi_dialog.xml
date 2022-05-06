@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".Register_loaithietbi"
+    >
 
-    <EditText
+   <!-- <EditText
         android:id="@+id/edMaLoai"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,7 +32,103 @@
             android:layout_height="wrap_content"
             android:hint="Loại Thiết Bị" />
     </com.google.android.material.textfield.TextInputLayout>
+-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp">
 
+        <TextView
+            android:drawableLeft="@drawable/ic_new_svgrepo_com"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Thêm Thiết Bị Mới"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2"
+            android:textColor="@color/red"
+            app:layout_constraintWidth_percent=".7" />
+
+        <EditText
+            android:id="@+id/edMaLoai"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg"
+            android:drawableLeft="@drawable/ic_qr_code_svgrepo_com"
+            android:drawablePadding="20dp"
+            android:hint="Mã Loại Thiết Bị"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.609"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.406"
+            app:layout_constraintWidth_percent=".8" />
+
+        <EditText
+            android:id="@+id/edTenLoai"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_bg"
+            android:drawableLeft="@drawable/ic_table_svgrepo_com"
+            android:drawablePadding="20dp"
+            android:hint="Loại Thiết Bị"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.609"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.572"
+            app:layout_constraintWidth_percent=".8" />
+
+        <Button
+            android:id="@+id/selectimage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/round_gradient_button_start_color"
+            android:text="CHỌN ẢNH TỪ THƯ VIỆN"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.609"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.778"
+            app:layout_constraintWidth_percent=".8" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:contentDescription="HinhMH"
+            android:layout_height="0dp"
+            android:layout_marginTop="56dp"
+            android:src="@drawable/ic_image_svgrepo_com"
+            app:layout_constraintBottom_toBottomOf="@+id/selectimage"
+            app:layout_constraintEnd_toEndOf="@+id/selectimage"
+            app:layout_constraintHeight_percent=".2"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/selectimage"
+            app:layout_constraintVertical_bias="0.0"></ImageView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,17 +140,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
+            android:textColor="@color/white"
             android:layout_weight="1"
-            android:drawableStart="@drawable/ic_save"
+            android:background="@drawable/roundedbutton"
+            android:drawableStart="@drawable/ic_diskette_save_svgrepo_com"
+            android:padding="10dp"
             android:text="Lưu" />
 
         <Button
             android:id="@+id/btnCancelLTB"
+            android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
+            android:background="@drawable/rounded_button_cancel"
             android:layout_weight="1"
-            android:drawableStart="@drawable/ic_cancel"
+            android:drawableStart="@drawable/ic_cancel_svgrepo_com"
+            android:padding="10dp"
             android:text="Huỷ" />
     </LinearLayout>
 </LinearLayout>
+
